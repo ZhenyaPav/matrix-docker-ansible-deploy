@@ -16,7 +16,7 @@ matrix_synapse_enabled: true
 matrix_synapse_github_org_and_repo: element-hq/synapse
 
 # renovate: datasource=docker depName=ghcr.io/element-hq/synapse
-matrix_synapse_version: v1.110.0
+matrix_synapse_version: v1.111.0
 
 matrix_synapse_username: ''
 matrix_synapse_uid: ''
@@ -461,6 +461,9 @@ matrix_synapse_federation_listener_resource_names: "{{ ['federation'] if matrix_
 # Enable this to allow Synapse to report utilization statistics about your server to matrix.org
 # (things like number of users, number of messages sent, uptime, load, etc.)
 matrix_synapse_report_stats: false
+
+# The endpoint to report homeserver usage statistics to.
+matrix_synapse_report_stats_endpoint: "https://matrix.org/report-usage-stats/push"
 
 # Controls whether the Matrix server will track presence status (online, offline, unavailable) for users.
 # If users participate in large rooms with many other servers,
